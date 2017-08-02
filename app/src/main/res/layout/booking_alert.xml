@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WhiteBgColor">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation="vertical">
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar_inner"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fillViewport="true">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:background="@color/WhiteBgColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Booking Id"
+                android:textSize="12sp"
+                android:textColor="@color/DarkGreyTextColor"/>
+            <TextView
+                android:id="@+id/tv_alert_bookID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/BlackTextColor"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pickup Location"
+                android:textSize="12sp"
+                android:textColor="@color/DarkGreyTextColor"/>
+            <TextView
+                android:id="@+id/tv_alert_pickLOC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/BlackTextColor"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pickup Time"
+                android:textSize="12sp"
+                android:textColor="@color/DarkGreyTextColor"/>
+            <TextView
+                android:id="@+id/tv_alert_pickTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/BlackTextColor"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pickup Distance"
+                android:textSize="12sp"
+                android:textColor="@color/DarkGreyTextColor"/>
+            <TextView
+                android:id="@+id/tv_alert_pickDist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/BlackTextColor"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pickup In"
+                android:textSize="12sp"
+                android:textColor="@color/DarkGreyTextColor"/>
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=": 02.00 mins"
+                android:textSize="12sp"
+                android:textColor="@color/BlackTextColor"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--Dashed Line-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/dashed_line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+    </LinearLayout>
+    <!--Dashed Line-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tv_alert_timeM"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="02:30"
+            android:textSize="20sp"
+            android:textColor="@color/BlackTextColor"
+            android:layout_centerInParent="true"
+        />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="120"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_alert_AcceptBooking"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Accept Booking"
+        android:textSize="16sp"
+        android:textColor="@color/WhiteTextColor"
+        android:background="@drawable/signin_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:stateListAnimator="@null"/>
+
+
+    <Button
+        android:id="@+id/btn_alert_RejectBooking"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Reject Booking"
+        android:textSize="16sp"
+        android:textColor="@color/WhiteTextColor"
+        android:background="@drawable/reject_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:stateListAnimator="@null"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.design.widget.CoordinatorLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WhiteBgColor">
+
+    <!--Titlebar-->
+   <!-- <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/OrangeBgColor">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Rides"
+            android:textSize="16sp"
+            android:textColor="@color/WhiteTextColor"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>-->
+    <!--Titlebar Ends-->
+
+    <LinearLayout android:layout_width = "match_parent"
+                  android:layout_height = "wrap_content">
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar_inner"/>
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/WhiteBgColor"
+        android:orientation = "vertical"
+    >
+
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "10dp"
+            android:orientation = "horizontal">
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "vertical">
+                <TextView
+                    android:id = "@+id/tv_rideD_date"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:text = "Wed, May 24, 05:41 PM"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "12sp" />
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "5dp"
+                    android:orientation = "horizontal">
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "CRN :"
+                        android:textColor = "@color/BlackTextColor"
+                        android:textSize = "12sp" />
+                    <TextView
+                        android:id = "@+id/tv_rideD_CRN"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "1234567890"
+                        android:textColor = "@color/OrangeTextColor"
+                        android:textSize = "12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:orientation = "vertical">
+                <LinearLayout
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "right"
+                    android:orientation = "horizontal">
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginRight = "3dp"
+                        android:text = "@string/rs"
+                        android:textColor = "@color/BlackTextColor"
+                        android:textSize = "18sp" />
+                    <TextView
+                        android:id = "@+id/tv_rideD_totalAMT"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "125"
+                        android:textColor = "@color/BlackTextColor"
+                        android:textSize = "18sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_rideD_status"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "25dp"
+                    android:layout_marginTop = "5dp"
+                    android:background = "@drawable/completed_btn"
+                    android:stateListAnimator = "@null"
+                    android:text = "Completed"
+                    android:textAllCaps = "false"
+                    android:textColor = "@color/GreenTextColor"
+                    android:textSize = "13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--Google Map-->
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "130dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "10dp"
+            android:orientation = "vertical">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:id="@+id/map"
+                      tools:context=".SingelRideDetails"
+                      android:name="com.google.android.gms.maps.SupportMapFragment" />
+        </LinearLayout>
+        <!--Google Map Ends-->
+
+
+        <!--Pick/Drop Outer-->
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "10dp"
+            android:background = "@drawable/white_box"
+            android:orientation = "horizontal"
+            android:paddingBottom = "10dp"
+            android:paddingLeft = "15dp"
+            android:paddingRight = "15dp"
+            android:paddingTop = "20dp">
+
+
+            <!--Pick/Drop Icon-->
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginBottom = "3dp"
+                android:layout_marginRight = "10dp"
+                android:layout_marginTop = "3dp"
+                android:orientation = "vertical">
+                <LinearLayout
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "match_parent"
+                    android:orientation = "vertical">
+                    <LinearLayout
+                        android:layout_width = "10dp"
+                        android:layout_height = "10dp"
+                        android:background = "@drawable/pickup_circle"
+                        android:orientation = "vertical">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width = "1dp"
+                        android:layout_height = "38dp"
+                        android:layout_gravity = "center_horizontal"
+                        android:background = "@color/BorderGreyColor"
+                        android:orientation = "vertical">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width = "10dp"
+                        android:layout_height = "10dp"
+                        android:background = "@drawable/drop_circle"
+                        android:orientation = "vertical">
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--Pick/Drop Icon Ends-->
+
+
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "vertical">
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:text = "Pickup Location"
+                    android:textColor = "@color/GreenTextColor"
+                    android:textSize = "12sp" />
+
+                <TextView
+                    android:id = "@+id/tv_rideD_pickLoc"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:ellipsize = "end"
+                    android:maxLines = "1"
+                    android:text = "Shubhshree colony, H.No. 101, N-6, Cidco, Aurangabad, Maharashtra"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginTop = "20sp"
+                    android:text = "Drop Location"
+                    android:textColor = "@color/RedTextColor"
+                    android:textSize = "12sp" />
+
+                <TextView
+                    android:id = "@+id/tv_rideD_dropLoc"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:ellipsize = "end"
+                    android:maxLines = "1"
+                    android:text = "Baba Petrol Pump, Jalna Road, Aurangabad"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Pick/Drop Outer Ends-->
+
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "20dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "20dp"
+            android:gravity = "center"
+            android:text = "Journey Details"
+            android:textAllCaps = "true"
+            android:textColor = "@color/BlackTextColor"
+            android:textSize = "14sp"
+            android:textStyle = "bold" />
+
+
+        <LinearLayout
+
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "20dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:orientation = "horizontal">
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "vertical">
+                <TextView
+                    android:id = "@+id/tv_rideD_rideKM"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "center"
+                    android:text = "8.18 km"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "16sp" />
+
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "center"
+                    android:text = "Ride km"
+                    android:textColor = "@color/DarkGreyTextColor"
+                    android:textSize = "11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "vertical">
+                <TextView
+                    android:id = "@+id/tv_rideD_rideTime"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "center"
+                    android:text = "18 min"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "16sp" />
+
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "center"
+                    android:text = "Ride Time"
+                    android:textColor = "@color/DarkGreyTextColor"
+                    android:textSize = "11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--Dashed Line-->
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "5dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:background = "@drawable/dashed_line"
+            android:orientation = "horizontal">
+        </LinearLayout>
+        <!--Dashed Line Ends-->
+
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "20dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "20dp"
+            android:gravity = "center"
+            android:text = "Fare Breakup"
+            android:textAllCaps = "true"
+            android:textColor = "@color/BlackTextColor"
+            android:textSize = "14sp"
+            android:textStyle = "bold" />
+
+
+        <LinearLayout
+
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "10dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:orientation = "horizontal">
+            <TextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "2"
+                android:text = "Total Fare"
+                android:textColor = "@color/DarkGreyTextColor"
+                android:textSize = "11sp" />
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "horizontal">
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = ":"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = "@string/rs"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+
+                <TextView
+                    android:id="@+id/tv_rideD_basicFare"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "125.50"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "10dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:orientation = "horizontal">
+            <TextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "2"
+                android:text = "Service Tax"
+                android:textColor = "@color/DarkGreyTextColor"
+                android:textSize = "11sp" />
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "horizontal">
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = ":"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = "@string/rs"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+
+                <TextView
+                    android:id="@+id/tv_rideD_serviceTax"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "9.79"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--Dashed Line-->
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "5dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:background = "@drawable/dashed_line"
+            android:orientation = "horizontal">
+        </LinearLayout>
+        <!--Dashed Line Ends-->
+
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginBottom = "10dp"
+            android:layout_marginLeft = "10dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginTop = "15dp"
+            android:orientation = "horizontal">
+            <TextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "2"
+                android:text = "Total Bill"
+                android:textColor = "@color/BlackTextColor"
+                android:textSize = "11sp"
+                android:textStyle = "bold" />
+            <LinearLayout
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:orientation = "horizontal">
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = ":"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp"
+                    android:textStyle = "bold" />
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginRight = "3dp"
+                    android:text = "@string/rs"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp"
+                    android:textStyle = "bold" />
+
+                <TextView
+                    android:id="@+id/tv_rideD_totalBill"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "133.00"
+                    android:textColor = "@color/BlackTextColor"
+                    android:textSize = "11sp"
+                    android:textStyle = "bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

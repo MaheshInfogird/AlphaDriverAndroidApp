@@ -1,0 +1,37 @@
+<resources>
+
+    <string name = "app_name">AlfaDriverApp</string>
+
+    <string name = "taxi_name">White Swift Dzire\nMH 20 AM 2151</string>
+
+    <string name = "drawer_open">Drawer Open</string>
+    <string name = "drawer_close">Drawer Close</string>
+
+    <!--Rupees Icon-->
+    <string name = "rs">\u20B9</string>
+    <!--Rupees Icon-->
+
+    <string-array name = "nav_drawer_items">
+        <item>Dashboard</item>
+        <item>My Rides</item>
+        <item>My Earnings</item>
+        <item>Language</item>
+        <item>Help</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <array name = "nav_drawer_icons">
+        <item>@drawable/dashboard_menu_icon</item>
+        <item>@drawable/my_rides_menu_icon</item>
+        <item>@drawable/my_earnings_menu_icon</item>
+        <!-- <item>@drawable/offers_side_menu_icon</item>-->
+        <item>@drawable/language_menu_icon</item>
+        <item>@drawable/help_menu_icon</item>
+        <item>@drawable/help_menu_icon</item>
+    </array>
+
+    <string name = "api_key">AIzaSyApW69jL_1clnYdzcGSRW8kxNSIleqbghk</string>
+
+    <string name = "action_settings">Settings</string>
+
+</resources>

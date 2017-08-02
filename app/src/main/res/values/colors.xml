@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+
+    <color name="colorPrimaryDark">#dd8724</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Text Color-->
+
+
+    <color name="WhiteTextColor">#fff</color>
+
+    <color name="OrangeTextColor">#f19b36</color>
+
+    <color name="BlackTextColor">#3f3f3f</color>
+
+    <color name="GreyTextColor">#c1c1c1</color>
+
+    <color name="DarkGreyTextColor">#777777</color>
+
+    <color name="GreenTextColor">#359b3a</color>
+
+    <color name="RedTextColor">#ec3838</color>
+
+    <!--Text Color Ends-->
+
+
+    <!--Bg Colors-->
+
+
+    <color name="WhiteBgColor">#ffffff</color>
+
+    <color name="GreenBgColor">#94bd5a</color>
+
+    <color name="OrangeBgColor">#f19b36</color>
+
+    <color name="LightGreyBgColor">#f1f1f1</color>
+
+    <color name="DarkGreyBgColor">#ebebeb</color>
+
+    <!--Bg Colors Ends-->
+
+
+    <!--Boder Color-->
+
+
+    <color name="BorderGreyColor">#acacac</color>
+
+    <!--Boder Color Ends-->
+
+
+</resources>

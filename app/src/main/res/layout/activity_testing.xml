@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:orientation="vertical"
+    tools:context = "com.alphadriver.Testing">
+
+    <Button
+        android:id="@+id/btn_acceptbooking"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="acceptbooking"
+    />
+
+    <Button
+        android:id="@+id/btn_clientlocate"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="clientlocate"
+    />
+
+    <Button
+        android:id="@+id/btn_completebooking"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="completebooking"
+    />
+
+</LinearLayout>

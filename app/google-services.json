@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "716911228651",
+    "firebase_url": "https://alfadriverapp.firebaseio.com",
+    "project_id": "alfadriverapp",
+    "storage_bucket": "alfadriverapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716911228651:android:93bcc190fe0386cd",
+        "android_client_info": {
+          "package_name": "com.alphadriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716911228651-uskvfa9siguhnod374303relr3o1n0hs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alphadriver",
+            "certificate_hash": "0ebcf569b03cfa4e117b750fc0390fb2c66b04f9"
+          }
+        },
+        {
+          "client_id": "716911228651-r2t7v0phjjc31qsa54f8lrc0l633glrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfHiKQWAMrZHm4LSlcdFD5wljGyfbYeVs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716911228651-r2t7v0phjjc31qsa54f8lrc0l633glrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
